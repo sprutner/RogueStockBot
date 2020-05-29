@@ -239,9 +239,8 @@ async function handleAllURLs() {
         })
       }
       catch (err) {
-        console.log("Error: No items")
+        console.log(`Error: No items ${err}`);
       }
-
 
       // No items found, everything sold out
       if (item_str === "") {
@@ -468,7 +467,6 @@ async function handleMessage(sender_psid, received_message) {
 
   // Checks if the message contains text
   if (received_message.text) {
-
     let rec_msg = received_message.text.toLowerCase();
     let item_full_name = rec_msg;
 
